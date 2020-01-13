@@ -10,7 +10,7 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.AlterField(
-            model_name='wagtail_embed_videos.embedvideo',
+            model_name='embedvideo',
             name='thumbnail',
             field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='+', to=get_image_model_string(), verbose_name='Thumbnail'),
         ),
