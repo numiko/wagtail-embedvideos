@@ -15,7 +15,6 @@ from django.core.exceptions import ImproperlyConfigured
 from django.db import models
 from django.conf import settings
 from django.utils.translation import ugettext_lazy as _
-from django.utils.encoding import python_2_unicode_compatible
 from django.urls import reverse
 from django.core.files import File
 from django.core.files.temp import NamedTemporaryFile
@@ -97,7 +96,6 @@ class EmbedVideoQuerySet(SearchableQuerySetMixin, models.QuerySet):
     pass
 
 
-@python_2_unicode_compatible
 class AbstractEmbedVideo(index.Indexed, models.Model):
     title = models.CharField(max_length=255, verbose_name=_('Title'))
     url = EmbedVideoField()
